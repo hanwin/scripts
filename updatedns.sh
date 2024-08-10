@@ -20,7 +20,7 @@ FILE="/tmp/updatedns"
 CONTENT=$(/usr/bin/upnpc -s | grep ^ExternalIPAddress | cut -c21-)
 
 if ! valid_ip "$CONTENT"; then
-    mail.py hans.winzell@gmail.com "Error while getting IP"
+    mail.py mail@domain.com "Error while getting IP"
     exit 1
 fi
 
